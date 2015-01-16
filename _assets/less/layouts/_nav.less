@@ -1,0 +1,302 @@
+
+// publications menu special case. This whole menu item is up for debate.
+//
+#site-menu .menu-publications .detail-panel > ul {
+	width: auto;
+	max-width:none;
+}
+
+.nav .disabled > a {
+	color: @nav-disabled-link-color;
+	&:hover,
+	&:focus {
+		color: @nav-disabled-link-hover-color;
+		text-decoration: none;
+		background-color: transparent;
+		cursor: not-allowed;
+	}
+}
+
+
+#site-menu{
+	-webkit-font-smoothing: antialiased;
+	margin: 0 -15px;
+	padding:0;
+	background-color:  @nav-level-1-bg;
+	position:relative;
+
+	ul{
+		margin: 0;
+		min-width: 130px;
+		.list-unstyled();
+		line-height: 1.4;
+	}
+
+	// top level
+
+	> li {
+		margin-left: -5px;
+		padding:0;
+		border-bottom: 4px solid;
+
+		&.open-parent > a {
+			background-color: @nav-level-1-bg-hover;
+			color: @nav-level-1-color-hover;
+			text-decoration: none;
+		}
+
+		&:first-child{
+			margin-left: 0px;
+		}
+		> a{
+			font-weight: bold;
+			padding:  @menu-top-level-padding;
+			color: @nav-level-1-color;
+			display: block;
+			padding-top: @menu-vertical-padding;
+			padding-bottom: @menu-vertical-padding;
+			&:hover, &:focus{
+				background-color: @nav-level-1-bg-hover;
+				color: @nav-level-1-color-hover;
+				text-decoration: none;
+			}
+		}
+	}
+
+// TR -- changed from styles to ugly nth selector hack (ie compat) to not require user selection of classes
+
+			// bottom borders for the nav items
+			> li {
+				border-color: @brand-home !important;
+			}
+
+			> li + li {
+				border-color: @brand-budget !important;
+			}
+
+			> li + li + li {
+				border-color: @brand-economy !important;
+			}
+
+			> li + li + li + li {
+				border-color: @brand-osr !important;
+			}
+
+			> li + li + li + li + li {
+				border-color: @brand-projects !important;
+			}
+
+			> li + li + li + li + li + li {
+				border-color: @brand-reform !important;
+			}
+
+
+			> li + li + li + li + li + li + li {
+				border-color: @brand-about !important;
+			}
+
+			> li + li + li + li + li + li + li + li {
+				border-color: @brand-pubsresources !important;
+			}
+
+			/*
+			> li + li + li + li + li + li + li {
+				border-color: @brand-blue !important;
+			}
+			*/
+
+
+
+			.detail-panel.shrink{
+				max-height:0;
+				padding: 0px 35px;
+				transition: all 0.4s ease;
+				border:none;
+			}
+
+			.detail-panel{
+				overflow: hidden;
+				transition: all 0.4s ease 0.1s;
+				max-height: 600px;
+				padding: 35px;
+				margin: auto;
+				position: absolute;
+				z-index: 10;
+				width: 100%;
+				max-width: 952px;
+				left: 0;
+				top: 41px;
+				overflow: hidden;
+
+				a{
+					font-size: 15px;
+					color: @nav-level-2-color;
+				}
+			}
+			.section-title{
+				margin: 0;
+				padding-bottom: @menu-md-vertical-padding*2;
+			}
+
+			// JW fixed most of the unnecessary "level-XXX" classes... most
+			//
+
+
+			// level two
+			.detail-panel > ul {
+				float: left;
+				margin-left: @grid-gutter-width/1.5;
+				padding-left: @grid-gutter-width/1.5;
+				width: 50%;
+				max-width: 420px;
+				//.list-links();
+
+				position: relative;
+				&:before {
+					.hidden-xs;
+					content: '';
+					border-left: 2px dotted #d5d5d6;
+					padding-bottom: 1000px;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+
+				> li{
+					line-height: 1.1;
+					margin-bottom: 8px;
+					> a{
+						font-weight: bold;
+					}
+				}
+
+				// level three
+				> li > ul{
+					margin-left: 7px;
+					margin-bottom: @grid-gutter-width/4;
+
+					> li > a{
+						color: @text-color;
+						font-weight: normal;
+					}
+				}
+			}
+
+			.menu-osr, .menu-taxesroyaltiesgrants, .menu-about, .menu-projectsinfrastructure, .menu-aboutus, .menu-publicationsresources {
+				.detail-panel > ul {
+					max-width: 300px;
+				}
+			}
+
+			// the nav image
+			.nav-image-wrap{
+				//width: auto;
+				// width: 200px;
+				float: left;
+
+				img {
+					// width: 100%;
+					// height: auto;
+				}
+			}
+		}
+
+// second nav colors
+.detail-panel{
+	background: @nav-level-2-bg;
+	border-bottom: @gray 4px solid;
+	color: @nav-level-2-color;
+}
+
+li .detail-panel{
+	background-color: lighten(@brand-home, 35%);
+	border-color: @brand-home;
+}
+
+// TR -- changed from styles to ugly nth selector hack (ie compat) to not require user selection of classes
+
+li + li .detail-panel{
+	background-color: lighten(@brand-budget, 60%);
+	border-color: @brand-budget;
+}
+
+li + li + li .detail-panel{
+	background-color: lighten(@brand-economy, 35%);
+	border-color: @brand-economy;
+}
+
+li + li + li + li .detail-panel{
+	background-color: lighten(@brand-osr, 60%);
+	border-color: @brand-osr;
+}
+
+li + li + li + li + li .detail-panel{
+	background-color: lighten(@brand-projects, 70%);
+	border-color: @brand-projects;
+}
+
+li + li + li + li + li + li .detail-panel{
+	background-color: lighten(@brand-reform, 60%);
+	border-color: @brand-reform;
+}
+
+
+li + li + li + li + li + li + li .detail-panel{
+	background-color: lighten(@brand-about, 25%);
+	border-color: @brand-about;
+}
+
+li + li + li + li + li + li + li + li .detail-panel{
+	background-color: lighten(@brand-pubsresources, 25%);
+	border-color: @brand-pubsresources;
+}
+
+@media (max-width: @screen-sm-max) {
+	#main-nav > .container{
+		width: 100%;
+		padding: 0;
+	}
+	#main-nav .mega-menu{
+		margin: 0 15px;
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	#main-nav{
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		z-index: 100;
+	}
+	.mega-menu{
+		margin-left: -@grid-gutter-width/2;
+		margin-right: -@grid-gutter-width/2;
+		.detail-panel{
+			position: relative !important;
+			top:auto !important;
+			left:auto;
+			max-height: 600px;
+			padding: 10px;
+		}
+		ul li{
+			float: none;
+			width:100%;
+			a{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	// level two
+	#site-menu .detail-panel > ul > li > a{
+		padding-top: @menu-md-vertical-padding;
+		padding-bottom: 0;
+	}
+	// reduce padding on larger screens
+	#site-menu ul ul > li > a{
+		display: inline-block;
+	}
+}

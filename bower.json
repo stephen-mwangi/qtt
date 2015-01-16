@@ -1,0 +1,21 @@
+{
+  "name": "treasury",
+  "version": "0.0.1",
+  "homepage": "http://breadcrumbdigital.com.au/projects/qtt/site",
+  "authors": [
+    "Jake Waterer"
+  ],
+  "license": "not for public use",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "_assets/vendor"
+  ],
+  "dependencies": {
+    "modernizr": "2.8.2",
+    "jquery": "1.11.1",
+    "bootstrap": "3.2.0",
+    "typeahead.js": "0.10.5"
+  }
+}

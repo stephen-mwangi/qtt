@@ -1,0 +1,15 @@
+node_modules/**
+_assets/vendor/**
+_assets/javascript/scripts.min.js
+_assets/css/**
+site/_assets/**
+cue2/**
+src/**
+*.log
+site/_assets/css/main.css
+site/_assets/css/main.css.map
+site/_assets/javascript/plugins/mega-menu.js
+site/_assets/javascript/scripts.js
+site2/**
+_assets/javascript/scripts.js
+*.zip

@@ -1,0 +1,148 @@
+// this is written mobile first so default is mobile view and then style adjusts for larger screens
+
+#header{
+
+	background-color: @header-bg;
+	color: @header-color;
+	padding-top: 20px;
+	z-index: 5;
+	position: relative;
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 100%;
+	 background: url(../images/header-swirl.png) 350px -98px no-repeat;
+		position: absolute;
+		top: 0;
+		right: 0;
+		// TR fixed layering issue with home link
+		z-index:-1;
+	}
+	a{
+		color: @header-color-link;
+	}
+}
+
+
+#tools{
+	margin-bottom: @grid-gutter-width/2;
+}
+
+@media (min-width: @screen-sm-min) {
+	#branding{
+		float: left;
+	}
+	#tools{
+		max-width: 400px;
+		float: right;
+		ul{
+			text-align: right;
+		}
+	}
+	#header{
+		padding-top: 0;
+
+		.site-logo {
+			// TR fix for mobile
+			margin-top: 12px;
+		}
+	}
+}
+
+
+@media (max-width: @screen-xs) {
+	#header {
+		width: 100%;
+	}
+
+	#branding {
+		padding: 0;
+	}
+}
+
+
+// cue
+.search-wrapper {
+
+	.icon-search {
+		display: table-cell;
+	}
+
+	.form-control {
+		box-shadow:none;
+		border-right:0;
+		border-color:#96b3c4;
+		margin-left: 10px;
+	}
+
+	.btn {
+		margin-left: -1px;
+		border-left: 0;
+		border-color:#96b3c4;
+		background: #fff;
+		text-transform: uppercase;
+	}
+}
+#tools {
+
+	.last-child {
+		display:block;
+		margin-top:0;
+		margin-bottom:0;
+		border:0;
+
+		.control-label {
+			margin-right:10px;
+		}
+
+	}
+	ul > li:first-child {
+		border:0;
+	}
+	ul > li {
+		font-size: 12px;
+		line-height: 1;
+		border-right: 0;
+		border-left: 1px solid #5a87a0;
+		margin-bottom: 0;
+		padding-top: 22px;
+		padding-right: 5px;
+		padding-left: 10px;
+	}
+}
+
+#site-name{
+	margin-top: 7px;
+	margin-bottom: 12px;
+	font-size: 17px;
+}
+
+@media (max-width: @screen-sm-max) {
+	#header {
+		//height: 220px;
+	}
+}
+
+@media (max-width: @screen-xs-min) {
+	#header{
+		//height: 150px;
+		//padding-top: 60px;
+		display: block;
+	}
+	#tools > li {
+		margin-bottom:10px;
+	}
+	#tools .submit {
+		margin-top:10px;
+	}
+}
+
+// Fix to accomodate Skip links
+/*
+@media (max-width: 40em) {
+	#header{
+		display:inline-block;
+	}
+}
+*/

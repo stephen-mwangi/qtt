@@ -1,0 +1,18 @@
+
+mark,
+.mark {
+  background-color: #ff0;
+  padding: .2em;
+}
+
+@placeholder-color:#90aec0;
+
+.form-control::-webkit-input-placeholder {
+  color: @placeholder-color;
+}
+.form-control:-moz-placeholder {
+  color: @placeholder-color;
+}
+.form-control:-ms-input-placeholder { /* IE10+ */
+  color: @placeholder-color;
+}

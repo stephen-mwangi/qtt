@@ -1,0 +1,70 @@
+/* typography */
+	body {
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: @font-size-base;
+		line-height: 1.5;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Helvetica, Arial, sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6, dt, strong, caption, th {
+		font-weight: bold;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	i, cite, em, var, dfn {
+		font-style: italic;
+	}
+	tt, code, kbd, samp, pre {
+		font-family: "Courier New", Courier, monospace;
+	}
+	pre {
+		display: block;
+		white-space: pre;
+		margin: 1em 0;
+	}
+	/* titles */
+	abbr, acronym {
+		border-bottom: 1px dotted #666;
+	}
+
+	/* links */
+	a, a:link, a:visited, a:hover, a:focus {
+		text-decoration: underline;
+	}
+	/* Navigation links underlined on focus/hover only */
+	#tools a,
+	#tools a:link,
+	#tools a:visited,
+	#nav-site a,
+	#nav-site a:link,
+	#nav-site a:visited,
+	#nav-section a,
+	#nav-section a:link,
+	#nav-section a:visited,
+	#footer a,
+	#footer a:link,
+	#footer a:visited, .nav-tabs a, .nav-tabs a:link, .nav-tabs a:visited {
+		text-decoration: none;
+	}
+
+	#tools a:hover,
+	#tools a:focus,
+	#nav-site a:hover,
+	#nav-site a:focus,
+	#nav-section a:hover,
+	#nav-section a:focus,
+	#footer a:hover,
+	#footer a:focus, 
+	.nav-tabs li > a:hover,
+	.nav-tabs li > a:focus {
+		text-decoration: underline;
+	}
+

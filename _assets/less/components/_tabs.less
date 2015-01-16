@@ -1,0 +1,26 @@
+#content .nav-tabs{
+	background-color: @tabs-choices-bg;
+	padding-top: @grid-gutter-width/2;
+	padding-left: 10px;
+	border-bottom: 0;
+	margin-bottom:20px;
+
+	> li > a{
+		color: @tabs-color;
+		border-radius: @tabs-choice-radius @tabs-choice-radius 0 0;
+		background-color: @tabs-choice-bg;
+		border-color: transparent;
+		border-bottom: 2px solid @tabs-choices-bg;
+	}
+	> li.active > a{
+		color:@tabs-active-color;
+		border-color: transparent;
+		font-weight:bold;
+	}
+}
+
+.tab-pane{
+	> p:first-child{
+		margin-top: @font-size-base * 2;
+	}
+}

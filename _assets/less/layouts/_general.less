@@ -1,0 +1,314 @@
+html {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body{
+	width: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.standard #content-container{
+	padding-top:40px;
+}
+
+#content-container{
+	z-index: 2;
+	//background-color:@content-bg;
+	padding-bottom: 0;
+	position: relative;
+}
+
+#content {
+	background-color: #fff;
+	padding-bottom: 30px;
+	z-index: 105;
+}
+
+@media only screen and (min-width: 768px) {
+	#content{
+		padding-left: @grid-gutter-width;
+	}
+}
+
+#content-container .banner:before,
+#content:before {
+	content: '';
+	width: 500%;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	bottom: 0;
+}
+
+.banner{
+	background-size: cover;
+	background-position: center center;
+	height: 90px;
+}
+
+.bg-white{
+	background-color: #FFF;
+}
+.panel-body img[alt="Red tape initiatives"] {
+	max-width:170px !important;
+	margin:0 auto !important;
+}
+
+.bg-blue{
+	background-color: @blue-bg;
+}
+
+#footer{
+	z-index: 1;
+}
+.lowerAlpha {
+	list-style-type: lower-alpha;
+
+}
+.lowerRoman {
+	list-style-type: lower-roman;
+}
+
+ol.none, ul.none {
+    list-style-type: none;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.decimal {
+    list-style-type: decimal;
+}
+
+.upperAlpha {
+    list-style-type: upper-alpha;
+}
+
+.upperRoman {
+    list-style-type: upper-roman;
+}
+
+
+ul.dash {
+    list-style-type: none;
+}
+
+ul.dash > li:before {
+    content: "-";
+    position: absolute;
+    margin-left: -1.1em;
+}
+
+ul.no-dash li:before {
+    display: inline-block;
+    content: "";
+}
+
+ul.circle {list-style-type: circle;}
+ul.disc {list-style-type: disc;}
+
+.footnote {
+	ol, ul {
+		padding:0 18px 18px 18px;
+	}
+}
+.tools {
+	display:none;
+}
+
+.home .media.row {
+	background-color:white;
+}
+
+
+@media print {
+	#access, #tools, #footer, #main-nav, #nav-section, .breadcrumb, .nav-tabs, .ruling-info .tools {
+		display:none;
+	}
+	.tab-content > .tab-pane {
+		display:block;
+	}
+	#qg-coa img.visible-print-inline-block {
+		display: block;
+		height: 27mm;
+		margin-left: 155mm;
+	}
+	#qg-coa img, #site-name img {
+		display: none;
+	}
+	#header {
+		border-bottom: 1px solid #000;
+		margin-bottom: 1em;
+	}
+	#qg-coa a {
+		display:none;
+	}
+	#header a[href]:after {
+		content: "" !important;
+	}
+	#content-container .aside {
+		display:none;
+	}
+	.table-rulings-references thead th, .table-rulings-responsive thead th, .table-ruling-responsive thead th, .table-rulings thead th, .table-osr thead th {
+		background-color:#002543 !important;
+		-webkit-print-color-adjust:exact;
+		color:white !important;
+	}
+	.tab-pane span.visible-print-inline-block {
+		font-size: 200%;
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+	.home .quick-links, .home .media.row, .program-image a, .program-caption a {
+		display:none;
+	}
+	.program-wrapper {
+		display: block;
+		float: none;
+	}
+	#theHero {
+		display:none;
+	}
+	.news-panel > p {
+		display:none;
+	}
+	.program-wrapper {
+		width:33%;
+		float:left;
+	}
+	.program-item {
+		width:70%;
+	}
+	a[href]:after {
+    content: none !important;
+  }
+  .data-centre.row {
+	margin-top:200px;
+  }
+
+}
+
+.tab-content .example {
+	background: #E5F1FC;
+	padding: 10px;
+	font-size: 100%;
+	display: block;
+	margin-bottom: 1em;
+	margin-top:1em;
+}
+
+.ruling-info {
+	margin-bottom:20px;
+	.tools {
+		float: right;
+		h3 {
+			display:none;
+		}
+		ul {
+			margin:0;
+			padding:0;
+			li {
+				list-style-type:none;
+				float: left;
+			}
+		}
+	}
+	.issue-date {
+		color: #6a768d;
+		font-size: 1.2em;
+		padding: 10px 0px 0px 15px;
+		.date {
+			font-weight: bold;
+		}
+	}
+	.icon-date {
+		text-transform:lowercase;
+		display: inline-block;
+		&:first-letter {
+			text-transform:uppercase;
+		}
+	}
+
+	.info-panel {
+		margin: 0px 0px 10px;
+		padding: 8px;
+	}
+	.info-panel .accessible + p {
+		display:none;
+	}
+}
+
+.ruling-info + .nav-tabs + .tab-content {
+	.lowerAlpha li > br, .lowerRoman li > br {
+		display:inline-block;
+		margin:2px;
+	}
+}
+
+
+.news-listing-container {
+	padding-top:20px;
+	padding-bottom:20px;
+	border-top:1px solid #ccc;
+	.news-listing-content {
+		h3 {
+			margin-top:8px;
+			margin-bottom: 30px;
+		}
+		.news-date {
+			font-size: 85%;
+			font-weight: bold;
+			color: #003865;
+		}
+	}
+}
+
+.news-date-subheading {
+	font-size: 85%;
+	margin-bottom: 30px;
+	color: #777;
+}
+
+hr + .news-listing-container {
+	border:0 !important;
+}
+
+.btn-news-prev {
+	margin-top: 20px;
+	display: inline-block;
+}
+
+
+.tab-pane  {
+	blockquote {
+		border:0;
+		font-size:100%;
+		padding:0;
+		margin:0;
+	}
+}
+
+@media all and (max-width:400px) {
+	.ruling-info .issue-date {
+		margin-bottom:20px;
+		.date {
+			display:block;
+
+		}
+	}
+}
+
+
+.thumbnail .caption, .thumbnail .small {
+	margin: 0;
+}
+.thumbnail .small {
+	padding: 9px;
+}
+
+.accordion-text {
+	display: inline-block;
+	margin-left: 5px;
+	width: 90%;
+}

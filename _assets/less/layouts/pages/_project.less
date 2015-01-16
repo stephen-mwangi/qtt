@@ -1,0 +1,31 @@
+.project-details{
+	border-top: 2px dotted @border-color-medium;
+	h4 {
+		margin: 5px 0 0 0;
+		color: @blue-bright;
+	}
+	p {
+		margin: 0 0 5px 0;
+		padding: 0 0 0 @font-size-base;
+	}
+
+	li {
+		margin: 5px 0;
+		padding: 5px 0;
+	}
+}
+.project-image{
+	margin: @grid-gutter-width/2 0;
+}
+
+.project + .lead {
+	margin-top: 30px;
+}
+
+.project {
+	.transition(all 0.25s);
+
+	&:hover {
+		background-color: @body-bg;
+	}
+}

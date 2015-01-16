@@ -1,0 +1,141 @@
+@hero-height: 257px;
+/* CUSTOMIZE THE hero
+-------------------------------------------------- */
+
+/* hero base class */
+.hero {
+	height: @hero-height;
+}
+/* Since positioning the image, we need to help out the caption */
+.hero-caption {
+	z-index: 5;
+	position: relative;
+	text-align: left;
+	margin-top: 10px;
+
+}
+
+/* Declare heights because of positioning of img element */
+.hero .item {
+	height: @hero-height;
+}
+
+
+#theHero{
+	overflow: hidden;
+	position: relative;
+	background-color: @blue;
+	.container{
+		position: relative;
+	}
+	img{
+		position: absolute;
+		right: 0%;
+	}
+}
+
+.home {
+
+	#header {
+		&:before {
+	background: url(../images/header-swirl-home.png) 183px -145px no-repeat;
+		}
+	}
+
+	.header-swirl {
+		width: 100%;
+		height: 257px;
+	background: url(../images/header-swirl-home.png) 180px -300px no-repeat;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 5;
+	}
+
+}
+
+@media (min-width: 1380px) {
+	.home {
+		#header {
+			&:before {
+				background: url(../images/header-swirl-home.png) 300px -145px no-repeat;
+			}
+		}
+
+		.header-swirl {
+			width: 100%;
+			height: 257px;
+		background: url(../images/header-swirl-home.png) 300px -300px no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 5;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.home #header:before{
+		background: url(../images/header-swirl-home.png) 83px -145px no-repeat;
+	}
+	.home .header-swirl{
+	background: url(../images/header-swirl-home.png) 80px -300px no-repeat;
+	}
+
+}
+
+@media (max-width: @screen-sm-max) {
+	.hero-caption {
+		//margin-top: 180px;
+	}
+}
+@media (max-width: @screen-xs-max) {
+	.hero-caption {
+		//margin-top: 170px;
+	}
+
+	.home #header {
+		&:before {
+			background: url(../images/header-swirl-home.png) 80px -174px no-repeat;
+		}
+	}
+}
+
+// Custom breakpoint
+@media (max-width: 601px) {
+	.quick-links {
+		.col-xs-6 {
+			width: 100%;
+		}
+
+		.quick-panel {
+			//max-width: 470px;
+			width: 100%;
+		}
+	}
+
+	.home .header-swirl{
+		background: url(../images/header-swirl-home.png) -62px -300px no-repeat;
+	}
+
+	.hero-caption {
+		z-index: 1;
+		//margin-top: 0px;
+		//position: absolute;
+		//top: 180px;
+		//right: 10px;
+		//text-align: right
+	}
+}
+
+
+// Custom breakpoint
+@media (max-width: 480px) {
+	.hero-caption {
+		z-index: 1;
+		margin-top: 0px;
+		top: 0;
+		left: @grid-gutter-width/2;
+		text-align: left;
+	}
+}

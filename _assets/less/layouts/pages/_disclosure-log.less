@@ -1,0 +1,41 @@
+#content #disclosure-log{
+	h2{
+		background-color: @blue-accessible;
+		font-size: 14px;
+		color: #fff;
+		padding: 8px 10px;
+		margin-bottom: 0;
+
+	}
+
+	h3{
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 14px;
+
+		a {
+			width: 100%;
+			.heading;
+			background-color: @blue-accessible;
+			color: #fff;
+			display: block;
+			padding: 8px 10px;
+
+			.icon-chevron-down-solid {
+				float: right;
+			}
+		}
+
+		a.collapsed {
+			background-color: @blue-light;
+			color: @charcoal;
+		}
+	}
+	
+	div .search-section:nth-child(odd) {
+		
+		h3 a.collapsed {
+			background-color: #fff;
+		}
+	}
+}

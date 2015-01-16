@@ -1,0 +1,24 @@
+#breadcrumbs > .container{
+	padding-top: 10px;
+	padding-left: 0;
+	padding-bottom: 10px;
+	background-color: transparent !important;
+	
+	.breadcrumb{
+		color: @hero-bg;
+		margin-bottom: 0;
+		padding: 0;
+		
+		a, .last-child {
+			font-size: 12px;
+			color: @hero-bg;
+			text-decoration: none;
+		}
+	}
+}
+
+@media (max-width: @screen-xs) {
+	#breadcrumbs > .container {
+		padding: 10px 15px;
+	}
+}

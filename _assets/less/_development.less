@@ -1,0 +1,74 @@
+#alts{
+	background-color:#EEE;
+	color: #666;
+	a{
+		color: #333;
+		text-decoration: underline;
+	}
+}
+
+
+.all-items #body-content h2.section-title{
+	margin: 20px 0;
+	background-color: @brand-warning;
+	padding: 1em;
+}
+
+.sitemap-org-chart{
+	font-size: 14px;
+}
+
+#site-menu .detail-panel li.disabled a{
+	color: @gray-light !important;
+}
+
+.wrapper{
+		width: 1000px;
+		height: 400px;
+		margin:auto;
+	}
+
+
+.bubble(@bubble-size, @background-color){
+	height:@bubble-size;
+	width:@bubble-size;
+	border-radius: 50%;
+	background-color: @background-color;
+	margin-top: -(@bubble-size/2 - 350px) - @bubble-size;
+	margin-left: @bubble-size/4;
+	float:left;
+	color: #FFF;
+	p{
+		margin:0;
+	}
+	.large{
+		font-size: @bubble-size/4;
+		line-height: 1em;
+	}
+}
+
+.bubble:nth-child(6n + 1){
+	.bubble( 200px, #AB1453);
+}
+
+.bubble:nth-child(6n + 2){
+	.bubble( 140px, #1E93A7);
+}
+
+.bubble:nth-child(6n + 3){
+	.bubble( 80px, #8BC73F);
+}
+
+.bubble:nth-child(6n + 4){
+	.bubble( 170px, #EE364C);
+}
+
+.bubble:nth-child(6n + 5){
+	.bubble( 75px, #833B85);
+}
+
+.bubble:nth-child(6n + 6){
+	.bubble( 100px, #AB1453);
+}
+
+
